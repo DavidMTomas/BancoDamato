@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BancoDamato</string>
+    <string name="introduce_el_usuario">Introduce el usuario</string>
+    <string name="obligatorio">Obligatorio</string>
+    <string name="introduce_la_contrase_a">Introduce la contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="salir">Salir</string>
+    <string name="aqui_el_dni">Aqui el dni</string>
+</resources>

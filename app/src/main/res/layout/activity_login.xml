@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glH10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Iniciar sesión"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glH10" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glH30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+
+    <!--Usuario-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtfUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:hint="@string/introduce_el_usuario"
+        app:helperText="@string/obligatorio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glH30">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/entradaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glH50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+
+    <!--Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtfPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:hint="@string/introduce_la_contrase_a"
+        app:endIconMode="password_toggle"
+        app:helperText="@string/obligatorio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glH50">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glH75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".75" />
+
+    <LinearLayout
+        android:id="@+id/lineraInferior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glH75">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEntrar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="@string/entrar" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalir"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="@string/salir" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
