@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BancoDamato</string>
+    <string name="introduce_el_usuario">Enter the user</string>
+    <string name="obligatorio">Mandatory</string>
+    <string name="introduce_la_contrase_a">Enter the password</string>
+    <string name="entrar">Log In</string>
+    <string name="salir">Log Out</string>
+    <string name="aqui_el_dni">Here is the ID</string>
+    <string name="bienvenido_a_tu_banco">Welcome to your bank</string>
+    <string name="inicio">LOG IN</string>
+    <string name="bienvenido_a">Welcome</string>
+    <string name="posicion_global">GLOBAL POSITION</string>
+    <string name="movimientos">TRANSACTIONS</string>
+    <string name="transferencias">TRANSFERS</string>
+    <string name="cambiar_contrase_a">CHANGE PASSWORD</string>
+    <string name="promociones">PROMOTIONS</string>
+    <string name="cajeros">ATMs</string>
+    <string name="volver">LOG OUT</string>
+    <string name="iniciar_sesion">Start sesion</string>
+    <string name="error_contrasenya">"The password cannot be empty"</string>
+    <string name="error_usuario">"User not available"</string>
+    <string name="usuario_vacio">The user cannot be empty</string>
+</resources>

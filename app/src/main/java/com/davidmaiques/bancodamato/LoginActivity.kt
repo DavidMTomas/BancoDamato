@@ -2,9 +2,13 @@ package com.davidmaiques.bancodamato
 
 import android.app.Activity
 import android.content.Intent
+import android.health.connect.datatypes.units.Length
 import android.os.Bundle
 import android.view.View
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.davidmaiques.bancodamato.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -18,17 +22,20 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-//        setContentView(R.layout.activity_login)
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
+
 
         // metodo para acceder a los atributos del xml
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        enableEdgeToEdge()
+        //setContentView(R.layout.activity_login)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
 
         //Cerrar aplicacion
@@ -42,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
             if (!hasFocus) {
                 usuario = binding.entradaUsuario.text.toString()
                 if (usuario.isNullOrEmpty()) {
-                    Snackbar.make(v, "El usuario no puede estar vacio", Snackbar.LENGTH_SHORT)
+                    Snackbar.make(v, getString(R.string.usuario_vacio), Snackbar.LENGTH_SHORT)
                         .setAnchorView(binding.txtfUsuario).show()
                 }
             }
@@ -52,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
             if (!hasFocus) {
                 val password = binding.passwordUsuario.text.toString()
                 if (password.isEmpty()) {
-                    Snackbar.make(v, "La contraseña no puede estar vacia", Snackbar.LENGTH_SHORT)
+                    Snackbar.make(v, getString(R.string.error_contrasenya), Snackbar.LENGTH_SHORT)
                         .setAnchorView(binding.txtfPassword).show()
                 }
             }

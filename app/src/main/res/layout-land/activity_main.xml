@@ -14,19 +14,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -45,7 +45,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/bienvenido_a"
+                            android:text="Bienvenido/a"
                             android:textSize="30dp" />
 
                         <TextView
@@ -67,16 +67,22 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="15dp">
 
-                <LinearLayout
+
+                <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnPosicion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/posicion_global"
+                        android:text="POSICION GLOBAL"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_posicion_global"
                         />
@@ -85,15 +91,19 @@
                         android:id="@+id/btnMovimientos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/movimientos"
+                        android:text="MOVIMIENTOS"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_movimientos"
                         />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnTransferencias"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/transferencias"
+                        android:text="TRANSFERENCIAS"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_transferencias"
                         />
@@ -101,16 +111,19 @@
                         android:id="@+id/btnCambiarContrasenya"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cambiar_contrase_a"
+                        android:text="CAMBIAR CONTRASEÑA"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_password"
                         />
-
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnPromociones"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/promociones"
+                        android:text="PROMOCIONES"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_promociones"
                         />
@@ -119,27 +132,25 @@
                         android:id="@+id/btnCajeros"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cajeros"
+                        android:text="CAJEROS"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_cajeros"
                         />
-
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnSalir"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/volver"
+                        android:text="SALIR"
                         android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_salir"
+                        android:layout_marginBottom="40dp"
                         />
-
-
-
-
-                </LinearLayout>
-
-
-
+                    </TableRow>
+                </TableLayout>
 
 
             </androidx.cardview.widget.CardView>
@@ -163,6 +174,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:navigationIcon="@drawable/ic_menu" />
+        app:navigationIcon="@drawable/ic_menu"
+        app:hideOnScroll="true"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

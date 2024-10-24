@@ -6,4 +6,18 @@
     <string name="entrar">Entrar</string>
     <string name="salir">Salir</string>
     <string name="aqui_el_dni">Aqui el dni</string>
+    <string name="bienvenido_a_tu_banco">Bienvenido a tu banco</string>
+    <string name="inicio">ENTRAR</string>
+    <string name="bienvenido_a">Bienvenido/a</string>
+    <string name="posicion_global">POSICION GLOBAL</string>
+    <string name="movimientos">MOVIMIENTOS</string>
+    <string name="transferencias">TRANSFERENCIAS</string>
+    <string name="cambiar_contrase_a">CAMBIAR CONTRASEÑA</string>
+    <string name="promociones">PROMOCIONES</string>
+    <string name="cajeros">CAJEROS</string>
+    <string name="volver">SALIR</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="error_contrasenya">"La contraseña no puede estar vacia"</string>
+    <string name="error_usuario">"Usuario no disponible"</string>
+    <string name="usuario_vacio">El usuario no puede estar vacio</string>
 </resources>

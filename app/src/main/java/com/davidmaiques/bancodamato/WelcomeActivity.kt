@@ -1,24 +1,25 @@
 package com.davidmaiques.bancodamato
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.davidmaiques.bancodamato.databinding.ActivityMainBinding
+import com.davidmaiques.bancodamato.databinding.ActivityWelcomeBinding
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
+class WelcomeActivity : AppCompatActivity() {
+    lateinit var binding: ActivityWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // metodo para acceder a los atributos del xml
-        binding = ActivityMainBinding.inflate(layoutInflater)
+
+
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         enableEdgeToEdge()
-        // setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -26,8 +27,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val usuario = intent.getStringExtra("usuario") ?: getString(R.string.error_usuario)
-        binding.txtvUsuario.text = usuario
+
+        binding.btnInicio.setOnClickListener {
+             val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
 
     }
 }
