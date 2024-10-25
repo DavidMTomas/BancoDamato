@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilModificarContrasenya1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:helperText="@string/obligatorio"
+            android:hint="@string/introduce_la_contrase_a"
+            app:endIconMode="password_toggle"
+            >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtinModificarContrasenya1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilModificarContrasenya2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tilModificarContrasenya1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:helperText="@string/obligatorio"
+            android:hint="@string/introduce_la_contrase_a"
+            app:endIconMode="password_toggle"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtinModificarContrasenya2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEntrar"
+            style="@style/EstiloBotones"
+            app:layout_constraintTop_toBottomOf="@+id/tilModificarContrasenya2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/aceptar"
+        />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalir"
+            style="@style/EstiloBotones"
+            app:layout_constraintTop_toBottomOf="@+id/tilModificarContrasenya2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/cancelar"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

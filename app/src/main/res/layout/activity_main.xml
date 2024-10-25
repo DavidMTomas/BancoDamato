@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorFondoApp">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -74,63 +75,49 @@
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnPosicion"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/posicion_global"
-                        android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_posicion_global"
+                        style="@style/EstiloBotonesMenu"
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnMovimientos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/movimientos"
-                        android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_movimientos"
+                        style="@style/EstiloBotonesMenu"
                         />
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnTransferencias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/transferencias"
-                        android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_transferencias"
+                        style="@style/EstiloBotonesMenu"
                         />
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnCambiarContrasenya"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/cambiar_contrase_a"
-                        android:layout_marginVertical="10dp"
-                        android:drawableStart="@drawable/ic_password"
+                        android:drawableStart="@android:drawable/ic_menu_edit"
+                        style="@style/EstiloBotonesMenu"
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnPromociones"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/promociones"
-                        android:layout_marginVertical="10dp"
-                        android:drawableStart="@drawable/ic_promociones"
+                        android:drawableStart="@android:drawable/ic_popup_reminder"
+                        style="@style/EstiloBotonesMenu"
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnCajeros"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EstiloBotonesMenu"
                         android:text="@string/cajeros"
-                        android:layout_marginVertical="10dp"
-                        android:drawableStart="@drawable/ic_cajeros"
+                        android:drawableStart="@android:drawable/ic_dialog_map"
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnSalir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/volver"
-                        android:layout_marginVertical="10dp"
                         android:drawableStart="@drawable/ic_salir"
+                        style="@style/EstiloBotonesMenu"
                         />
 
 
@@ -154,7 +141,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="add task"
         android:src="@drawable/ic_add_task"
-        app:layout_anchor="@id/btnAppBar" />
+        app:layout_anchor="@id/btnAppBar"
+        android:backgroundTint="@color/botonesAccesos"/>
 
     <!--boton inferior, funciona junto a CoordinatorLayout-->
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -163,6 +151,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:navigationIcon="@drawable/ic_menu" />
+        app:navigationIcon="@drawable/ic_menu"
+        android:backgroundTint="@color/botonesMenu"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

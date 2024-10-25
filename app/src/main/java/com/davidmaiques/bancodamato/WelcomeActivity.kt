@@ -34,7 +34,8 @@ class WelcomeActivity : AppCompatActivity() {
 
         }
 
-
+        binding.animationView.setAnimation(R.raw.animation)
+        binding.animationView.playAnimation()
 
     }
 }

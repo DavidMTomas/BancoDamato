@@ -76,5 +76,10 @@ class LoginActivity : AppCompatActivity() {
         }
 
 
+        binding.btnSalir.setOnClickListener{
+            startActivity(Intent(this,WelcomeActivity::class.java))
+        }
+
+
     }
 }

@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/colorFondoApp">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -16,15 +17,15 @@
         app:layout_constraintGuide_percent="0.10" />
 
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/EstiloTitulos"
         android:gravity="center"
         android:text="@string/iniciar_sesion"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/glH10" />
+        app:layout_constraintTop_toTopOf="@+id/glH10"
+        android:layout_marginTop="30dp"/>
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -105,18 +106,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEntrar"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
+            style="@style/EstiloBotones"
             android:text="@string/entrar" />
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSalir"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:text="@string/salir" />
+            style="@style/EstiloBotones"
+            android:text="@string/salir"
+           />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
