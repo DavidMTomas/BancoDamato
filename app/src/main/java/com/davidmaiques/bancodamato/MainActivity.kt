@@ -87,6 +87,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Tema 5 act. 2
+        binding.btnTransferencias.setOnClickListener {
+            val intent= Intent(this,TransferActivity::class.java)
+            intent.putExtra("usuario", binding.txtvUsuario.text)
+            startActivity(intent)
+        }
 
 
     }
