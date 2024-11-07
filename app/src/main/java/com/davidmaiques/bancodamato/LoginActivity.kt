@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                         .setAnchorView(binding.txtfPassword).show()
                 }
             }
+
         }
 
         //boton entrar, lanza la otra pantalla si el usuario es correcto

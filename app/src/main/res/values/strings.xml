@@ -25,4 +25,17 @@
     <string name="titulo_modificar_contraseña">\"Modificar Contraseña\"</string>
     <string name="toas_contraseñas_distintas">Las contraseñas no coinciden</string>
     <string name="contraseñas_iguales">Contraseñas modificadas</string>
+    <string name="banco">Banco</string>
+    <string name="elige_tu_cuenta">Elige tu cuenta:</string>
+    <string name="cuenta_propia">Cuenta propia</string>
+    <string name="cuenta_ajena">Cuenta ajena</string>
+    <string name="escriba_el_numero_de_cuenta_ajena">Escriba el numero de cuenta ajena</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="enviar_justificante">Enviar justificante</string>
+    <string name="enviar">Enviar</string>
+    <string name="propia">propia</string>
+    <string name="ajena">ajena</string>
+    <string name="Cuenta_origen">Cuenta origen</string>
+    <string name="A_cuenta">A cuenta</string>
+    <string name="Importe">Importe</string>
 </resources>

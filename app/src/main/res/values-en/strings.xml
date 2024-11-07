@@ -22,4 +22,20 @@
     <string name="usuario_vacio">The user cannot be empty</string>
     <string name="aceptar">Accept</string>
     <string name="cancelar">Cancel</string>
+    <string name="banco">Bank</string>
+    <string name="elige_tu_cuenta">Choose your account:</string>
+    <string name="cuenta_propia">Own account</string>
+    <string name="cuenta_ajena">Foreign account</string>
+    <string name="escriba_el_numero_de_cuenta_ajena">Enter the foreign account number</string>
+    <string name="cantidad">Amount:</string>
+    <string name="enviar_justificante">Send receipt</string>
+    <string name="enviar">Send</string>
+    <string name="propia">Own</string>
+    <string name="ajena">Foreign</string>
+    <string name="Cuenta_origen">Source account</string>
+    <string name="A_cuenta">To account</string>
+    <string name="Importe">Amount</string>
+    <string name="titulo_modificar_contraseña">"Change Password"</string>
+    <string name="toas_contraseñas_distintas">Passwords do not match</string>
+    <string name="contraseñas_iguales">Passwords changed</string>
 </resources>

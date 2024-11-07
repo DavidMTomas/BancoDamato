@@ -36,6 +36,12 @@
         <item name="backgroundTint">@color/botonesMenu</item>
     </style>
 
+<style name="radioBotons">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="buttonTint">@color/botonesAccesos</item>
+    <item name="android:layout_margin">10dp</item>
+</style>
 
 
 </resources>
