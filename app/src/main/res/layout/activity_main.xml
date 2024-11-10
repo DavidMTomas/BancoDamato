@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorFondoApp">
+    android:background="@color/colorFondoApp"
+    tools:context=".MainActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -56,6 +56,12 @@
                             android:gravity="center"
                             android:text="@string/aqui_el_dni"
                             android:textSize="20dp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPosicion"
+                            style="@style/EstiloBotonesMenu"
+                            android:drawableStart="@drawable/ic_posicion_global"
+                            android:text="@string/posicion_global" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -64,8 +70,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:layout_margin="10dp"
+                android:layout_marginTop="30dp"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -74,59 +80,43 @@
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnPosicion"
-                        android:text="@string/posicion_global"
-                        android:drawableStart="@drawable/ic_posicion_global"
+                        android:id="@+id/btnMovimientos"
                         style="@style/EstiloBotonesMenu"
-                        />
+                        android:drawableStart="@drawable/ic_movimientos"
+                        android:text="@string/movimientos" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnMovimientos"
-                        android:text="@string/movimientos"
-                        android:drawableStart="@drawable/ic_movimientos"
-                        style="@style/EstiloBotonesMenu"
-                        />
-                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnTransferencias"
-                        android:text="@string/transferencias"
-                        android:drawableStart="@drawable/ic_transferencias"
                         style="@style/EstiloBotonesMenu"
-                        />
+                        android:drawableStart="@drawable/ic_transferencias"
+                        android:text="@string/transferencias" />
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnCambiarContrasenya"
-                        android:text="@string/cambiar_contrase_a"
-                        android:drawableStart="@android:drawable/ic_menu_edit"
                         style="@style/EstiloBotonesMenu"
-                        />
+                        android:drawableStart="@android:drawable/ic_menu_edit"
+                        android:text="@string/cambiar_contrase_a" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnPromociones"
-                        android:text="@string/promociones"
-                        android:drawableStart="@android:drawable/ic_popup_reminder"
                         style="@style/EstiloBotonesMenu"
-                        />
+                        android:drawableStart="@android:drawable/ic_popup_reminder"
+                        android:text="@string/promociones" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnCajeros"
                         style="@style/EstiloBotonesMenu"
-                        android:text="@string/cajeros"
                         android:drawableStart="@android:drawable/ic_dialog_map"
-                        />
+                        android:text="@string/cajeros" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnSalir"
-                        android:text="@string/volver"
-                        android:drawableStart="@drawable/ic_salir"
                         style="@style/EstiloBotonesMenu"
-                        />
-
-
+                        android:drawableStart="@drawable/ic_salir"
+                        android:text="@string/volver" />
 
 
                 </LinearLayout>
-
-
-
 
 
             </androidx.cardview.widget.CardView>
@@ -137,12 +127,13 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btCuentasGlobal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/botonesAccesos"
         android:contentDescription="add task"
         android:src="@drawable/ic_add_task"
-        app:layout_anchor="@id/btnAppBar"
-        android:backgroundTint="@color/botonesAccesos"/>
+        app:layout_anchor="@id/btnAppBar" />
 
     <!--boton inferior, funciona junto a CoordinatorLayout-->
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -151,7 +142,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:navigationIcon="@drawable/ic_menu"
-        android:backgroundTint="@color/botonesMenu"/>
+        android:backgroundTint="@color/botonesMenu"
+        app:navigationIcon="@drawable/ic_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

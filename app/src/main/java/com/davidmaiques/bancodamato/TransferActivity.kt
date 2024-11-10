@@ -16,6 +16,7 @@ import com.davidmaiques.bancodamato.databinding.ActivityTransferBinding
 class TransferActivity : AppCompatActivity() {
     lateinit var binding: ActivityTransferBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

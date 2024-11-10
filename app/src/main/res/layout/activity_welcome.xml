@@ -8,6 +8,7 @@
     tools:context=".WelcomeActivity"
     android:background="@color/colorFondoApp">
 
+
     <TextView
         android:id="@+id/tvBienvenida"
         style="@style/EstiloTitulos"

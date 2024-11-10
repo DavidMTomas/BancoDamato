@@ -11,6 +11,8 @@ import com.davidmaiques.bancodamato.databinding.ActivityWelcomeBinding
 class WelcomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityWelcomeBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
