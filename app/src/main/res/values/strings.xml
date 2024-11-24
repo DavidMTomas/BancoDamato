@@ -38,4 +38,6 @@
     <string name="Cuenta_origen">Cuenta origen</string>
     <string name="A_cuenta">A cuenta</string>
     <string name="Importe">Importe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

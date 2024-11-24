@@ -6,34 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GlobalPositionActivity">
+    tools:context=".activities.GlobalPositionActivity">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="POSICION GLOBAL"
-        android:gravity="center_horizontal"
-        android:textSize="30dp"
-        android:layout_margin="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cuentas:"
-        android:textSize="20dp"
-        android:padding="20dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcCuentas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/item_cuentas"
-        />
-
-
-
-
-
+  <androidx.fragment.app.FragmentContainerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/frPosicionGlobal"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.davidmaiques.bancodamato
+package com.davidmaiques.bancodamato.activities
 
 import android.os.Bundle
 import android.view.View
@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.davidmaiques.bancodamato.R
+import com.davidmaiques.bancodamato.adapters.AdapterMovimientos
 import com.davidmaiques.bancodamato.bd.MiBancoOperacional
 import com.davidmaiques.bancodamato.databinding.ActivityMovementsBinding
 import com.davidmaiques.bancodamato.pojo.Cliente

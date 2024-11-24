@@ -1,4 +1,4 @@
-package com.davidmaiques.bancodamato
+package com.davidmaiques.bancodamato.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
@@ -31,7 +32,7 @@ class WelcomeActivity : AppCompatActivity() {
 
 
         binding.btnInicio.setOnClickListener {
-             val intent = Intent(this,LoginActivity::class.java)
+             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
 
         }

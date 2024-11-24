@@ -1,4 +1,4 @@
-package com.davidmaiques.bancodamato
+package com.davidmaiques.bancodamato.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.bd.MiBancoOperacional
 import com.davidmaiques.bancodamato.databinding.ActivityLoginBinding
 import com.davidmaiques.bancodamato.pojo.Cliente
@@ -96,7 +97,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         binding.btnSalir.setOnClickListener{
-            startActivity(Intent(this,WelcomeActivity::class.java))
+            startActivity(Intent(this, WelcomeActivity::class.java))
         }
 
 

@@ -1,7 +1,6 @@
-package com.davidmaiques.bancodamato
+package com.davidmaiques.bancodamato.activities
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -11,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.databinding.ActivityTransferBinding
 
 class TransferActivity : AppCompatActivity() {

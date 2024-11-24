@@ -1,4 +1,4 @@
-package com.davidmaiques.bancodamato
+package com.davidmaiques.bancodamato.activities
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.bd.MiBancoOperacional
 import com.davidmaiques.bancodamato.databinding.ActivityMainBinding
 import com.google.android.material.button.MaterialButton
