@@ -12,13 +12,14 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.adapters.AdapterMovimientos
+import com.davidmaiques.bancodamato.adapters.OnClickListener
 import com.davidmaiques.bancodamato.bd.MiBancoOperacional
 import com.davidmaiques.bancodamato.databinding.ActivityMovementsBinding
 import com.davidmaiques.bancodamato.pojo.Cliente
 import com.davidmaiques.bancodamato.pojo.Cuenta
 import com.davidmaiques.bancodamato.pojo.Movimiento
 
-class MovementsActivity : AppCompatActivity() {
+class MovementsActivity : AppCompatActivity(),OnClickListener<Movimiento> {
     lateinit var binding: ActivityMovementsBinding
     lateinit var adapterMovimientos: AdapterMovimientos
     lateinit var linearLayoutManager: LinearLayoutManager
@@ -74,7 +75,7 @@ class MovementsActivity : AppCompatActivity() {
                     mbo?.getMovimientos(cuentaSeleccionada) as ArrayList<Movimiento>
 
                 //PAsar el vector al adapter
-                adapterMovimientos = AdapterMovimientos(movimientosCuenta)
+                adapterMovimientos = AdapterMovimientos(movimientosCuenta, this@MovementsActivity)
                 linearLayoutManager = LinearLayoutManager(this@MovementsActivity)
                 itemDecoration = DividerItemDecoration(this@MovementsActivity, 1)
 
@@ -92,6 +93,9 @@ class MovementsActivity : AppCompatActivity() {
 
         }
 
+    }
 
+    override fun onClick(cuenta: Movimiento) {
+        TODO("Not yet implemented")
     }
 }

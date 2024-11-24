@@ -4,20 +4,17 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.adapters.AdapterCuentas
 import com.davidmaiques.bancodamato.bd.MiBancoOperacional
-import com.davidmaiques.bancodamato.databinding.ActivityPosicionGlogalBinding
 import com.davidmaiques.bancodamato.databinding.FragmentAccountsBinding
 import com.davidmaiques.bancodamato.pojo.Cliente
 import com.davidmaiques.bancodamato.pojo.Cuenta
 
 private const val ARG_CLIENTE="cliente"
 
-class AccountsFragment : Fragment(), com.davidmaiques.bancodamato.adapters.OnClickListener {
+class AccountsFragment : Fragment(), com.davidmaiques.bancodamato.adapters.OnClickListener<Cuenta> {
    lateinit var binding:FragmentAccountsBinding
     lateinit var linearLayoutManager: LinearLayoutManager
     lateinit var adapterCuentas: AdapterCuentas
@@ -43,8 +40,9 @@ class AccountsFragment : Fragment(), com.davidmaiques.bancodamato.adapters.OnCli
         //Accedemos a los metodos de los POJOS
         val mbo = MiBancoOperacional.getInstance(context)
         val cuentas = mbo?.getCuentas(cliente)
+        binding = FragmentAccountsBinding.inflate(inflater, container, false)
 
-        adapterCuentas = AdapterCuentas(cuentas as ArrayList<Cuenta>)
+        adapterCuentas = AdapterCuentas(cuentas as ArrayList<Cuenta>, this)
         linearLayoutManager=LinearLayoutManager(context)
 
         binding.rcCuentas.apply {
@@ -70,9 +68,10 @@ class AccountsFragment : Fragment(), com.davidmaiques.bancodamato.adapters.OnCli
             }
     }
 
-    override fun onClick(cuenta :Cuenta) {
-        if(listener!=null){
-            listener.onCuentaSeleccionada(cuenta)
-        }
+
+
+    override fun onClick(cuenta: Cuenta) {
+        if (listener != null)
+            listener?.onCuentaSeleccionada(cuenta)
     }
 }

@@ -10,7 +10,7 @@ import com.davidmaiques.bancodamato.databinding.ItemMovimientosBinding
 import com.davidmaiques.bancodamato.pojo.Movimiento
 
 // TODO tema 5 act 3
-class AdapterMovimientos(private var lista: ArrayList<Movimiento>) :
+class AdapterMovimientos(private var lista: ArrayList<Movimiento>, private val listener: OnClickListener<Movimiento>) :
     RecyclerView.Adapter<AdapterMovimientos.ViewHolder>() {
     lateinit var context: Context
 
@@ -20,6 +20,13 @@ class AdapterMovimientos(private var lista: ArrayList<Movimiento>) :
             binding.tvDescripcion.text = movimiento.getDescripcion()
             binding.tvFecha.text = movimiento.getFechaOperacion().toString()
             binding.tvImporte.text = movimiento.getImporte().toString()
+            setListener(movimiento)
+        }
+
+        private fun setListener(movimiento: Movimiento) {
+                binding.root.setOnClickListener {
+                    listener.onClick(movimiento)
+                }
         }
     }
 

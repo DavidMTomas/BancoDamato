@@ -10,7 +10,7 @@ import com.davidmaiques.bancodamato.databinding.ItemCuentasBinding
 import com.davidmaiques.bancodamato.pojo.Cuenta
 
 // TODO TEMA 5 act. 3
-class AdapterCuentas(private var lista: ArrayList<Cuenta>) :
+class AdapterCuentas(private var lista: ArrayList<Cuenta>, private val listener: OnClickListener<Cuenta>) :
     RecyclerView.Adapter<AdapterCuentas.ViewHolder>() {
     lateinit var context: Context
 
@@ -19,6 +19,13 @@ class AdapterCuentas(private var lista: ArrayList<Cuenta>) :
         fun render(cuenta: Cuenta) {
             binding.tvCuentas.text = cuenta.getNumeroCuenta()
             binding.tvSaldo.text = cuenta.getSaldoActual().toString()
+            setListener(cuenta)
+        }
+
+        private fun setListener(cuenta: Cuenta) {
+                binding.root.setOnClickListener {
+                    listener.onClick(cuenta)
+                }
         }
 
     }
