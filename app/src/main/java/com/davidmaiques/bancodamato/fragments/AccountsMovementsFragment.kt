@@ -18,9 +18,11 @@ import com.davidmaiques.bancodamato.pojo.Movimiento
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 private const val ARG_ACCOUNT = "cuenta"
+private const val ARG_TYPE = "tipo"
 class AccountsMovementsFragment : Fragment(),OnClickListener<Movimiento> {
     private lateinit var binding: FragmentAccountsMovementsBinding
     private var cuenta:Cuenta?=null
+    private var tipo: Int=-1
 
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var movementAdapter: AdapterMovimientos
@@ -32,6 +34,7 @@ class AccountsMovementsFragment : Fragment(),OnClickListener<Movimiento> {
         super.onCreate(savedInstanceState)
         arguments?.let {
             cuenta = it.getSerializable(ARG_ACCOUNT) as Cuenta
+            tipo = it.getInt(ARG_TYPE)
         }
     }
 
@@ -41,8 +44,10 @@ class AccountsMovementsFragment : Fragment(),OnClickListener<Movimiento> {
     ): View? {
         binding = FragmentAccountsMovementsBinding.inflate(inflater, container, false)
         val bancoOperacional = MiBancoOperacional.getInstance(context)
-        val movements = bancoOperacional?.getMovimientos(cuenta) as ArrayList<Movimiento>
 
+        //TODO TEma 7 asignar nuevo metodo
+        val movements =if(tipo<0) bancoOperacional?.getMovimientos(cuenta) as ArrayList<Movimiento>
+        else bancoOperacional?.getMovimientosTipo(cuenta,tipo) as ArrayList<Movimiento>
         linearLayoutManager = LinearLayoutManager(context)
         movementAdapter = AdapterMovimientos(movements, this)
         dividerItemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
@@ -57,10 +62,11 @@ class AccountsMovementsFragment : Fragment(),OnClickListener<Movimiento> {
     }
     companion object {
         @JvmStatic
-        fun newInstance(cuenta: Cuenta) =
+        fun newInstance(cuenta: Cuenta, tipo:Int) =
             AccountsMovementsFragment().apply {
                 arguments = Bundle().apply {
                     putSerializable(ARG_ACCOUNT, cuenta)
+                    putInt(ARG_TYPE, tipo)
                 }
             }
     }

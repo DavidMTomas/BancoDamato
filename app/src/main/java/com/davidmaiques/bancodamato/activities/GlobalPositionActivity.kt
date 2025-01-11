@@ -40,11 +40,18 @@ class GlobalPositionActivity : AppCompatActivity(),AccountsListener {
         accountsFragment = AccountsFragment.newInstance(cliente)
 
 
+        if(savedInstanceState==null){
             fragmentManager.beginTransaction().add(
                 binding.frPosicionGlobal.id,
                 accountsFragment,
                 AccountsFragment::class.java.name
             ).commit()
+        }else{
+            fragmentManager.beginTransaction().replace(
+                binding.frPosicionGlobal.id,
+                accountsFragment,AccountsFragment::class.java.name).commit()
+        }
+
         accountsFragment.setCuentasListener(this)
 
     }
@@ -54,7 +61,7 @@ class GlobalPositionActivity : AppCompatActivity(),AccountsListener {
             supportFragmentManager.findFragmentById( it.id ) } != null
 
         if (tablet) {
-            val accountsMovementsFragment = AccountsMovementsFragment.newInstance(cuenta)
+            val accountsMovementsFragment = AccountsMovementsFragment.newInstance(cuenta, -1)
             supportFragmentManager.beginTransaction().replace(
                 binding.frPosicionGlobal.id,
                 accountsMovementsFragment,

@@ -30,14 +30,62 @@ class GlobalPositionDetailsActivity : AppCompatActivity() {
 
         val cuenta: Cuenta = intent.getSerializableExtra("cuenta") as Cuenta
 
-        accountsMovementsFragment = AccountsMovementsFragment.newInstance(cuenta)
-        fragmentManager = supportFragmentManager
 
-        fragmentManager.beginTransaction().replace(
-            R.id.frPosicionGlobal,
-            accountsMovementsFragment,
-            AccountsMovementsFragment::class.java.name
+        supportFragmentManager.beginTransaction().replace(
+            R.id.frgGlobalPositionDetails,
+            AccountsMovementsFragment.newInstance(cuenta, -1)
         ).commit()
+
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_all -> {
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.frgGlobalPositionDetails,
+                        AccountsMovementsFragment.newInstance(cuenta, 0)
+                    ).commit()
+                    true
+                }
+
+                R.id.nav_type_0 -> {
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.frgGlobalPositionDetails,
+                        AccountsMovementsFragment.newInstance(cuenta, 0)
+                    ).commit()
+                    true
+                }
+
+                R.id.nav_type_1 -> {
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.frgGlobalPositionDetails,
+                        AccountsMovementsFragment.newInstance(cuenta, 1)
+                    ).commit()
+                    true
+                }
+
+                R.id.nav_type_2 -> {
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.frgGlobalPositionDetails,
+                        AccountsMovementsFragment.newInstance(cuenta, 2)
+                    ).commit()
+                    true
+                }
+
+                else -> {
+                    false
+                }
+
+
+            }
+        }
+
+//        accountsMovementsFragment = AccountsMovementsFragment.newInstance(cuenta)
+//        fragmentManager = supportFragmentManager
+//
+//        fragmentManager.beginTransaction().replace(
+//            R.id.frPosicionGlobal,
+//            accountsMovementsFragment,
+//            AccountsMovementsFragment::class.java.name
+//        ).commit()
 
 
     }
