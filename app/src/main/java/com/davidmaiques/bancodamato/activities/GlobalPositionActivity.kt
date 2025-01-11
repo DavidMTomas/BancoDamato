@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.databinding.ActivityPosicionGlogalBinding
@@ -33,8 +34,8 @@ class GlobalPositionActivity : AppCompatActivity(),AccountsListener {
         }
 
         val cliente = intent.getSerializableExtra("cliente") as Cliente
-        val activeFragment =
-            supportFragmentManager.findFragmentById(binding.frPosicionGlobal.id)
+        //val activeFragment =
+          //  supportFragmentManager.findFragmentById(binding.frPosicionGlobal.id)
 
         fragmentManager = supportFragmentManager
         accountsFragment = AccountsFragment.newInstance(cliente)
@@ -57,13 +58,12 @@ class GlobalPositionActivity : AppCompatActivity(),AccountsListener {
     }
     //TODO Tema 6 act2
     override fun onCuentaSeleccionada(cuenta: Cuenta) {
-        val tablet: Boolean = binding.frPosicionGlobal?.let {
-            supportFragmentManager.findFragmentById( it.id ) } != null
+        val tablet: Boolean = supportFragmentManager.findFragmentById(R.id.frgGlobalPositionDetails) != null
 
         if (tablet) {
             val accountsMovementsFragment = AccountsMovementsFragment.newInstance(cuenta, -1)
             supportFragmentManager.beginTransaction().replace(
-                binding.frPosicionGlobal.id,
+                R.id.frgGlobalPositionDetails,
                 accountsMovementsFragment,
                 AccountsMovementsFragment::class.java.name
             ).commit()

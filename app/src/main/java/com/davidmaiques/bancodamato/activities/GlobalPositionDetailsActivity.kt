@@ -21,12 +21,6 @@ class GlobalPositionDetailsActivity : AppCompatActivity() {
         binding = ActivityGlobalPositionDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setContentView(R.layout.activity_global_position_details)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
         val cuenta: Cuenta = intent.getSerializableExtra("cuenta") as Cuenta
 
