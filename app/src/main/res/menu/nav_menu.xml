@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_posicion"
+            android:icon="@drawable/baseline_posicion_24"
+            android:title="Posición global"/>
+        <item
+            android:id="@+id/nav_movimientos"
+            android:icon="@drawable/baseline_movimientos_24"
+            android:title="Movimientos"/>
+        <item
+            android:id="@+id/nav_transferencias"
+            android:icon="@drawable/baseline_transferencias_24"
+            android:title="Transferencias"/>
+
+        <item
+            android:id="@+id/nav_contrasena"
+            android:icon="@drawable/baseline_password_24"
+            android:title="Cambiar contraseña"/>
+        <item
+            android:id="@+id/nav_promociones"
+            android:icon="@drawable/baseline_promociones_24"
+            android:title="Promociones"/>
+        <item
+            android:id="@+id/nav_cajeros"
+            android:icon="@drawable/baseline_cajeros_24"
+            android:title="Cajeros"/>
+        <item
+            android:id="@+id/nav_configuracion"
+            android:icon="@drawable/baseline_configuracion_24"
+            android:title="Configuracion"/>
+    </group>
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Logout"/>
+        </menu>
+    </item>
+</menu>

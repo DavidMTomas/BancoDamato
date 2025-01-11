@@ -38,5 +38,7 @@
     <string name="Cuenta_origen">Cuenta origen</string>
     <string name="A_cuenta">A cuenta</string>
     <string name="Importe">Importe</string>
+    <string name="open_nav">Open navigation Drawer</string>
+    <string name="close_nav">Close navigation Drawer</string>
     <string name="textoDialogo">Id: %1$s\nTipo: %2$s\nFecha Operación: %3$s\nDescripción: %4$s\nImporte: %5$s\nCuenta Origen: %6$s\nCuenta Destino: %7$s</string>
 </resources>

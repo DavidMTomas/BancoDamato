@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFondoApp"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     tools:context=".activities.MainActivity">
+    <!--Drawer layout contiene todo el codigo-->
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFondoApp">
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -146,3 +156,16 @@
         app:navigationIcon="@drawable/ic_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--El navigation debe de esta al final del xml para que funcione el onitem selected-->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        />
+
+    <!--Hasta aqui el contenido del menu lateral-->
+</androidx.drawerlayout.widget.DrawerLayout>

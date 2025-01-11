@@ -4,20 +4,25 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.bd.MiBancoOperacional
 import com.davidmaiques.bancodamato.databinding.ActivityMainBinding
+import com.davidmaiques.bancodamato.pojo.Cliente
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.textfield.TextInputEditText
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var drawerLayout: DrawerLayout
+   private lateinit var cliente: Cliente
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +30,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        enableEdgeToEdge()
-        // setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
         // TODO mensaje de bienvenida
-        val cliente = intent.getSerializableExtra("cliente")
-        binding.txtvUsuario.text = "$cliente.getNombre()"
+         cliente = intent.getSerializableExtra("cliente") as Cliente
+         binding.txtvUsuario.text = "$cliente.getNombre()"
+
+
+        //TODO tema 7 activitat1
+        drawerLayout = binding.drawerLayout
+        val appBar= binding.btnAppBar
+        val navigationView= binding.navView
+        navigationView.setNavigationItemSelectedListener(this)
+
+        val toggle =
+            ActionBarDrawerToggle(this, drawerLayout, appBar, R.string.open_nav, R.string.close_nav)
+
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
 
 
         // TODO posicion global Tema 5 activitat 3
@@ -125,5 +137,50 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    // TODO tema 7 implementar metodo
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+       when(item.itemId) {
+           R.id.nav_home -> {
+               val intent = Intent(this, MainActivity::class.java)
+               intent.putExtra("cliente", cliente)
+               startActivity(intent)
+           }
+
+           R.id.nav_posicion -> {
+               val intent = Intent(this, GlobalPositionActivity::class.java)
+               intent.putExtra("cliente", cliente)
+               startActivity(intent)
+           }
+
+           R.id.nav_movimientos -> {
+               val intent = Intent(this, MovementsActivity::class.java)
+               intent.putExtra("cliente", cliente)
+               startActivity(intent)
+           }
+
+           R.id.nav_transferencias -> {
+               val intent = Intent(this, TransferActivity::class.java)
+               startActivity(intent)
+           }
+           R.id.nav_contrasena->{
+               binding.btnCambiarContrasenya.performClick()
+           }
+           R.id.nav_logout -> {
+               val intent = Intent(this, LoginActivity::class.java)
+               startActivity(intent)
+           }
+       }
+           drawerLayout.closeDrawer(GravityCompat.START)
+                   return true
+       }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START)
+    }else
+        onBackPressedDispatcher.onBackPressed()
     }
 }
