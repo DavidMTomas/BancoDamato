@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
          binding.txtvUsuario.text = "$cliente.getNombre()"
 
 
+
+
+
+
         //TODO tema 7 activitat1
         drawerLayout = binding.drawerLayout
         val appBar= binding.btnAppBar
@@ -169,6 +173,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            }
            R.id.nav_logout -> {
                val intent = Intent(this, LoginActivity::class.java)
+               startActivity(intent)
+           }
+           R.id.nav_configuracion -> {
+               val intent = Intent(this, SettingsActivity::class.java)
                startActivity(intent)
            }
        }

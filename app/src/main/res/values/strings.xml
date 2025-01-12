@@ -38,7 +38,42 @@
     <string name="Cuenta_origen">Cuenta origen</string>
     <string name="A_cuenta">A cuenta</string>
     <string name="Importe">Importe</string>
-    <string name="open_nav">Open navigation Drawer</string>
-    <string name="close_nav">Close navigation Drawer</string>
+    <string name="open_nav">Abrir navegacion Drawer</string>
+    <string name="close_nav">Cerrar navegacion Drawer</string>
     <string name="textoDialogo">Id: %1$s\nTipo: %2$s\nFecha Operación: %3$s\nDescripción: %4$s\nImporte: %5$s\nCuenta Origen: %6$s\nCuenta Destino: %7$s</string>
+
+
+
+    <!-- Preference Titles -->
+    <string name="titulo_settings">Ajustes</string>
+    <string name="media">Multimedia</string>
+    <string name="music">Musica</string>
+    <string name="music_on">Escuchar la música mientras se ejecuta la aplicación</string>
+    <string name="music_off">No escuchar la música mientras se ejecuta la aplicación</string>
+
+    <string name="welcome_video">Video de bienvenida</string>
+    <string name="welcome_video_on">Reproducir un video al iniciar la aplicanción</string>
+    <string name="welcome_video_off">No reproducir un video al iniciar la aplicanción</string>
+
+    <string name="language">Lenguaje</string>
+    <string name="app_language">Idioma de la aplicación</string>
+    <string name="language_dialog">Elige un idioma</string>
+    <string name="spanish">Español</string>
+    <string name="english">Ingles</string>
+
+
+    <string name="data">Data</string>
+    <string name="data_dialog">Elige donde guardar los datos</string>
+    <string name="data_origin">Origen de los datos</string>
+    <string name="local">Datos locales</string>
+    <string name="cloud">Servicio web</string>
+
+    <string name="notifications">Notificaciones</string>
+    <string name="active_notifications">Habilitar notificaciones</string>
+    <string name="volume">Volumen</string>
+
+
+
+
+
 </resources>

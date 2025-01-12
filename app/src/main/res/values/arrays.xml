@@ -1,0 +1,23 @@
+<resources>
+    <string-array name="language_entries">
+        <item>@string/spanish</item>
+        <item>@string/english</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>ESP</item>
+        <item>ING</item>
+    </string-array>
+
+    <!-- Data -->
+    <string-array name="data_entries">
+        <item>@string/local</item>
+        <item>@string/cloud</item>
+    </string-array>
+
+    <string-array name="data_values">
+        <item>LOCAL</item>
+        <item>CLOUD</item>
+
+    </string-array>
+</resources>

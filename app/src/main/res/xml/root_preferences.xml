@@ -1,0 +1,58 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:icon="@drawable/baseline_music_note_24"
+        app:title="@string/media">
+
+        <SwitchPreferenceCompat
+            app:summaryOff="@string/music_off"
+            app:summaryOn="@string/music_on"
+            app:title="@string/music" />
+        <SwitchPreferenceCompat
+            android:title="@string/welcome_video"
+            app:summaryOff="@string/welcome_video_off"
+            app:summaryOn="@string/welcome_video_on" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:icon="@drawable/baseline_language_24"
+        app:title="@string/language">
+
+        <ListPreference
+            android:dialogTitle="@string/language_dialog"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:key="language_entries"
+            app:title="@string/app_language"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:icon="@drawable/baseline_cloud_24"
+        app:title="@string/data">
+
+        <ListPreference
+            android:dialogTitle="@string/data_dialog"
+            android:entries="@array/data_entries"
+            android:entryValues="@array/data_values"
+            android:key="data_entries"
+            app:title="@string/data_origin"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/baseline_notifications_24"
+        app:title="@string/notifications">
+
+        <SwitchPreferenceCompat
+            app:summary="@string/active_notifications"
+            android:defaultValue="false" />
+
+        <SeekBarPreference
+            app:title="@string/volume"
+            android:key="notificationVolume"
+            app:showSeekBarValue="true"
+            android:defaultValue="80" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

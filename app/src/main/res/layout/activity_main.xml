@@ -153,7 +153,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:backgroundTint="@color/botonesMenu"
-        app:navigationIcon="@drawable/ic_menu" />
+        app:navigationIcon="@drawable/ic_menu"
+        app:menu="@menu/bottom_appbar_menu"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
