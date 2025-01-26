@@ -28,14 +28,6 @@ class AtmManagementActivity : AppCompatActivity() {
 
         cliente = intent.getSerializableExtra("cliente") as? Cliente
 
-        initUI()
-        buttonSave()
-        buttonCancel()
-        buttonUpdate()
-        buttonDelete()
-    }
-
-    private fun initUI() {
 
         // si el usuario es admin
         if (cliente != null && cliente!!.getNif().equals("11111111A", ignoreCase = true)) {
@@ -69,13 +61,12 @@ class AtmManagementActivity : AppCompatActivity() {
                 btnUpdate.isVisible = false
                 btnDelete.isVisible = false
             }
-            Toast.makeText(this, "Los botones no son visibles para este usuario", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Los botones no son visibles para este usuario", Toast.LENGTH_LONG)
+                .show()
         }
 
 
-    }
 
-    private fun buttonDelete() {
         binding.btnDelete.setOnClickListener {
 
             val queue = LinkedBlockingQueue<Int>()
@@ -93,11 +84,9 @@ class AtmManagementActivity : AppCompatActivity() {
             }
             finish()
         }
-    }
 
-    private fun buttonUpdate() {
+
         binding.btnUpdate.setOnClickListener {
-            // Controlamos que en latitud y longitud sea un double
             cajeroEntity!!.apply {
                 try {
                     direccion = binding.tilAddress.editText?.text.toString()
@@ -129,13 +118,10 @@ class AtmManagementActivity : AppCompatActivity() {
             }
             finish()
         }
-    }
 
-    private fun buttonSave() {
 
         binding.btnSave.setOnClickListener {
             val cajero: CajeroEntity
-            // Controlamos que en latitud y longitud sea un double
             try {
                 cajero = CajeroEntity(
                     direccion = binding.tilAddress.editText?.text.toString(),
@@ -167,9 +153,7 @@ class AtmManagementActivity : AppCompatActivity() {
 
             finish()
         }
-    }
 
-    private fun buttonCancel() {
         binding.btnCancel.setOnClickListener {
             finish()
         }

@@ -18,7 +18,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilAddress"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"
@@ -37,7 +36,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilLatitude"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"
@@ -56,7 +54,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilLongitude"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"

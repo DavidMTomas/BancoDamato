@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            tools:text="ATM 1"
+            tools:text="CAJERO"
             android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imgAtm"
@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName"
-            android:text="Carrer del Clariano, 1, 46021 Valencia, Valencia, España" />
+            tools:text="direccion de calle, numero uno" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

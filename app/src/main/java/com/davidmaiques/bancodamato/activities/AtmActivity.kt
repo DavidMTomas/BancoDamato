@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.davidmaiques.bancodamato.R
 import com.davidmaiques.bancodamato.adapters.AtmAdapter
@@ -23,7 +22,6 @@ class AtmActivity : AppCompatActivity(), OnClickAtmListener {
     private var cliente: Cliente? = null // Cambiar a tipo nullable
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAtmBinding.inflate(layoutInflater)
@@ -38,10 +36,7 @@ class AtmActivity : AppCompatActivity(), OnClickAtmListener {
 
     override fun onStart() {
         super.onStart()
-        initUI()
-    }
 
-    private fun initUI() {
         initRecycler()
         // OCULTAR BOTON SI ADMIN
         if (cliente != null && cliente!!.getNif().equals("11111111A", ignoreCase = true)){
