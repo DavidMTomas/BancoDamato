@@ -71,9 +71,21 @@
     <string name="notifications">Notificaciones</string>
     <string name="active_notifications">Habilitar notificaciones</string>
     <string name="volume">Volumen</string>
-
-
-
+    <string name="atm">cajeros</string>
+    <string name="btnSave">guardar</string>
+    <string name="btnCancel">cancelar</string>
+    <string name="btnUpdate">actualizar</string>
+    <string name="btnDelete">eliminar</string>
+    <string name="createAtm">crear cajero</string>
+    <string name="address">direccion</string>
+    <string name="latitude">latitud</string>
+    <string name="longitude">altitud</string>
+    <string name="modifyAtm">modificar cajero</string>
+    <string name="deletedSuccessfully">cajero eliminado</string>
+    <string name="numberException">Error !!!</string>
+    <string name="updatedSuccessfully">actualizado</string>
+    <string name="createdSuccessfully">cajero creado</string>
+    <string name="placeOf">ubicacion cajero</string>
 
 
 </resources>

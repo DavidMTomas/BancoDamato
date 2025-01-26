@@ -140,6 +140,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             startActivity(intent)
         }
 
+        //TODO tema 9
+        binding.btnCajeros.setOnClickListener {
+            val intent = Intent(this, AtmActivity::class.java)
+            intent.putExtra("cliente", cliente) // prova
+            startActivity(intent)
+        }
+
 
     }
 
@@ -168,6 +175,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                val intent = Intent(this, TransferActivity::class.java)
                startActivity(intent)
            }
+
            R.id.nav_contrasena->{
                binding.btnCambiarContrasenya.performClick()
            }
@@ -177,6 +185,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            }
            R.id.nav_configuracion -> {
                val intent = Intent(this, SettingsActivity::class.java)
+               startActivity(intent)
+           }
+
+           // TODO tema 9
+           R.id.nav_cajeros ->{
+               val intent = Intent(this, AtmActivity::class.java)
+               intent.putExtra("cliente", cliente) // prova
                startActivity(intent)
            }
        }

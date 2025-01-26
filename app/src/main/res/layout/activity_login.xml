@@ -115,6 +115,19 @@
             style="@style/EstiloBotones"
             android:text="@string/salir"
            />
+
     </LinearLayout>
+
+    <TextView
+        style="@style/EstiloTitulos"
+        android:gravity="center"
+        android:text="admin: 11111111a\nuser:    22222222b\n              33333333c"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
