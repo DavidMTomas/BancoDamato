@@ -43,7 +43,6 @@
     <string name="textoDialogo">Id: %1$s\nTipo: %2$s\nFecha Operación: %3$s\nDescripción: %4$s\nImporte: %5$s\nCuenta Origen: %6$s\nCuenta Destino: %7$s</string>
 
 
-
     <!-- Preference Titles -->
     <string name="titulo_settings">Ajustes</string>
     <string name="media">Multimedia</string>
@@ -86,6 +85,8 @@
     <string name="updatedSuccessfully">actualizado</string>
     <string name="createdSuccessfully">cajero creado</string>
     <string name="placeOf">ubicacion cajero</string>
+    <string name="localizarCajeros">localizar</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>

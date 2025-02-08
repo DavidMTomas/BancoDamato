@@ -58,6 +58,12 @@ class AtmActivity : AppCompatActivity(), OnClickAtmListener {
         }
 
 
+        binding.btnLocalizar.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 
